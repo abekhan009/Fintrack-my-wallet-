@@ -1,0 +1,410 @@
+.add-transaction {
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fade-in 0.4s ease-out;
+}
+
+.add-transaction__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+/* Type Selector */
+.add-transaction__type-selector {
+    display: flex;
+    gap: var(--space-sm);
+    padding: 4px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--glass-border);
+}
+
+.add-transaction__type-btn {
+    flex: 1;
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-muted);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.add-transaction__type-btn:hover {
+    color: var(--color-text-primary);
+    background: var(--glass-bg-strong);
+}
+
+.add-transaction__type-btn--active {
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+.add-transaction__type-btn--income {
+    background: var(--gradient-success);
+    box-shadow: var(--shadow-glow-success);
+}
+
+.add-transaction__type-btn--expense {
+    background: var(--gradient-danger);
+    box-shadow: var(--shadow-glow-danger);
+}
+
+.add-transaction__type-btn--transfer {
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-glow-primary);
+}
+
+/* Amount Card */
+.add-transaction__amount-card {
+    text-align: center;
+    padding: var(--space-2xl) !important;
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border) !important;
+}
+
+.add-transaction__amount-label {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+}
+
+.add-transaction__amount-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+}
+
+.add-transaction__currency {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-muted);
+}
+
+.add-transaction__amount-input {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    border: none;
+    background: transparent;
+    text-align: center;
+    width: 200px;
+    outline: none;
+}
+
+.add-transaction__amount-input::placeholder {
+    color: var(--color-text-muted);
+}
+
+/* Hide number input spinners */
+.add-transaction__amount-input::-webkit-outer-spin-button,
+.add-transaction__amount-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.add-transaction__amount-input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Field */
+.add-transaction__field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.add-transaction__label {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-secondary);
+}
+
+/* Categories */
+.add-transaction__categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.add-transaction__category {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    color: var(--color-text-secondary);
+}
+
+.add-transaction__category:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary-light);
+}
+
+.add-transaction__category--active {
+    background: var(--gradient-primary);
+    border-color: transparent;
+    color: white;
+    box-shadow: var(--shadow-glow-primary);
+}
+
+.add-transaction__category-icon {
+    font-size: var(--font-size-base);
+}
+
+.add-transaction__category-name {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    text-transform: capitalize;
+}
+
+/* Expense Frequency Selector */
+.add-transaction__frequency {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+}
+
+.add-transaction__freq-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-xl);
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-align: center;
+    color: var(--color-text-secondary);
+}
+
+.add-transaction__freq-btn:hover {
+    border-color: var(--color-primary);
+}
+
+.add-transaction__freq-btn--active {
+    background: var(--gradient-glow);
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-glow-primary);
+}
+
+.add-transaction__freq-icon {
+    font-size: var(--font-size-2xl);
+}
+
+.add-transaction__freq-title {
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+}
+
+.add-transaction__freq-desc {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+/* Recurring Options Card */
+.add-transaction__recurring-options {
+    padding: var(--space-lg) !important;
+    background: var(--color-bg-secondary) !important;
+    border: 1px solid var(--glass-border) !important;
+}
+
+.add-transaction__recurring-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.add-transaction__recurring-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.add-transaction__recurring-field label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.add-transaction__recurring-field input {
+    padding: var(--space-md);
+    font-size: var(--font-size-base);
+    background: var(--color-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text-primary);
+}
+
+.add-transaction__recurring-field input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 20px var(--color-primary-glow);
+}
+
+.add-transaction__recurring-note {
+    font-size: var(--font-size-sm);
+    color: var(--color-warning);
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    margin: 0;
+}
+
+/* Wallets */
+.add-transaction__wallets {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+}
+
+.add-transaction__wallet {
+    padding: var(--space-sm) var(--space-lg);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.add-transaction__wallet:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary-light);
+}
+
+.add-transaction__wallet--active {
+    background: var(--gradient-primary);
+    border-color: transparent;
+    color: white;
+    box-shadow: var(--shadow-glow-primary);
+}
+
+/* Date & Note Inputs */
+.add-transaction__date-input,
+.add-transaction__note-input {
+    padding: var(--space-md);
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.add-transaction__date-input::placeholder,
+.add-transaction__note-input::placeholder {
+    color: var(--color-text-muted);
+}
+
+.add-transaction__date-input:focus,
+.add-transaction__note-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 20px var(--color-primary-glow);
+}
+
+/* Submit Button */
+.add-transaction__submit {
+    position: sticky;
+    bottom: calc(var(--bottom-nav-height) + var(--space-md));
+    background: linear-gradient(to top, var(--color-bg) 60%, transparent);
+    padding-top: var(--space-xl);
+    margin-top: var(--space-md);
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+    .add-transaction__submit {
+        position: static;
+        background: none;
+        padding-top: var(--space-md);
+    }
+
+    .add-transaction__categories {
+        gap: var(--space-md);
+    }
+}
+
+/* Loading State */
+.add-transaction__loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    color: var(--color-text-muted);
+}
+
+/* Success Message */
+.add-transaction__success {
+    padding: var(--space-md);
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    border-radius: var(--radius-md);
+    color: var(--color-success);
+    text-align: center;
+    animation: slideDown 0.3s ease;
+}
+
+/* Error Message */
+.add-transaction__error {
+    padding: var(--space-md);
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: var(--radius-md);
+    color: var(--color-danger);
+    text-align: center;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* No Wallets Card */
+.add-transaction__no-wallets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-3xl);
+    text-align: center;
+}
+
+.add-transaction__no-wallets h3 {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-xl);
+}
+
+.add-transaction__no-wallets p {
+    color: var(--color-text-muted);
+}

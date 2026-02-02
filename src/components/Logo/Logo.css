@@ -1,0 +1,30 @@
+.logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.logo__svg {
+    filter: drop-shadow(0 0 12px rgba(139, 92, 246, 0.3));
+    transition: all var(--transition-fast);
+}
+
+.logo:hover .logo__svg {
+    filter: drop-shadow(0 0 16px rgba(139, 92, 246, 0.5));
+    transform: scale(1.05);
+}
+
+/* Animation for floating effect */
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+.logo--animated .logo__svg {
+    animation: logoFloat 3s ease-in-out infinite;
+}

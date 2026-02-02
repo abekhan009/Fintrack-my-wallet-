@@ -1,0 +1,90 @@
+.tuition-setup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 2rem 1rem;
+}
+
+.tuition-setup__card {
+    width: 100%;
+    max-width: 500px;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.tuition-setup__header {
+    margin-bottom: 2rem;
+}
+
+.tuition-setup__icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.tuition-setup__title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.tuition-setup__description {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.tuition-setup__error {
+    background: var(--error-light);
+    color: var(--error-dark);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--error-border);
+}
+
+.tuition-setup__form {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.tuition-setup__actions {
+    margin-top: 1.5rem;
+}
+
+.tuition-setup__note {
+    padding: 1rem;
+    background: var(--background-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border-light);
+}
+
+.tuition-setup__note p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .tuition-setup {
+        min-height: 50vh;
+        padding: 1rem;
+    }
+
+    .tuition-setup__card {
+        padding: 2rem 1.5rem;
+    }
+
+    .tuition-setup__icon {
+        font-size: 3rem;
+    }
+
+    .tuition-setup__title {
+        font-size: 1.5rem;
+    }
+}

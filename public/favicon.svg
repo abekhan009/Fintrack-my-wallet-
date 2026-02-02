@@ -1,0 +1,24 @@
+<svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Outer circle with gradient -->
+    <circle cx="50" cy="50" r="45" fill="url(#logoGradient)" stroke="url(#logoStroke)" strokeWidth="2"/>
+    
+    <!-- Inner design - stylized "F" -->
+    <path d="M30 25 L30 75 M30 25 L65 25 M30 50 L55 50" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+    
+    <!-- Dollar sign accent -->
+    <circle cx="70" cy="30" r="8" fill="rgba(255, 255, 255, 0.2)" stroke="white" strokeWidth="1.5"/>
+    <text x="70" y="35" textAnchor="middle" fontSize="10" fill="white" fontWeight="bold">$</text>
+    
+    <!-- Gradient definitions -->
+    <defs>
+        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#8b5cf6"/>
+            <stop offset="50%" stopColor="#6366f1"/>
+            <stop offset="100%" stopColor="#10b981"/>
+        </linearGradient>
+        <linearGradient id="logoStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="rgba(139, 92, 246, 0.5)"/>
+            <stop offset="100%" stopColor="rgba(16, 185, 129, 0.5)"/>
+        </linearGradient>
+    </defs>
+</svg>

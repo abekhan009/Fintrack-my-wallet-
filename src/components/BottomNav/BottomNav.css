@@ -1,0 +1,85 @@
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: var(--bottom-nav-height);
+    padding: var(--space-sm) var(--space-md);
+    padding-bottom: calc(var(--space-sm) + env(safe-area-inset-bottom, 0px));
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border-top: 1px solid var(--glass-border);
+}
+
+.bottom-nav__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm);
+    border-radius: var(--radius-md);
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    min-width: 56px;
+}
+
+.bottom-nav__item:hover {
+    color: var(--color-text-secondary);
+}
+
+.bottom-nav__item--active {
+    color: var(--color-primary-light);
+}
+
+.bottom-nav__item--active .bottom-nav__icon {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: 0 4px 16px var(--color-primary-glow);
+}
+
+.bottom-nav__item--add .bottom-nav__icon {
+    background: var(--gradient-primary);
+    color: white;
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-full);
+    box-shadow: 0 4px 20px var(--color-primary-glow);
+    transform: translateY(-12px);
+}
+
+.bottom-nav__item--add:hover .bottom-nav__icon {
+    transform: translateY(-16px);
+    box-shadow: 0 8px 30px var(--color-primary-glow);
+}
+
+.bottom-nav__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+}
+
+.bottom-nav__label {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+}
+
+.bottom-nav__item--add .bottom-nav__label {
+    margin-top: var(--space-xs);
+}
+
+/* Hide on laptop */
+@media (min-width: 1024px) {
+    .bottom-nav {
+        display: none;
+    }
+}
