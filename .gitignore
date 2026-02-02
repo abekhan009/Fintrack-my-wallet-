@@ -114,8 +114,8 @@ Desktop.ini
 *.swo
 *~
 
-# Package manager files
-package-lock.json
+# Package manager files (keep package-lock.json for consistent builds)
+# package-lock.json  # DO NOT exclude - needed for CI/CD
 yarn.lock
 pnpm-lock.yaml
 
