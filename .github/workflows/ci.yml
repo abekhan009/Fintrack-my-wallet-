@@ -36,7 +36,7 @@ jobs:
         VITE_API_URL: ${{ secrets.VITE_API_URL || 'http://localhost:5000/api/v1' }}
     
     - name: Upload build artifacts
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v6
       with:
         name: build-files-${{ matrix.node-version }}
         path: dist/
