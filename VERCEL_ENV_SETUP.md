@@ -16,8 +16,8 @@ JWT_REFRESH_SECRET=uoHyl0+6WoTd/UutShDgnooM4+AYv7cZpHMfpDqDBmc=
 ACCESS_TOKEN_TTL=10m
 REFRESH_TOKEN_TTL=7d
 COOKIE_SECURE=true
-COOKIE_DOMAIN=your-domain.com
-CORS_ORIGIN=https://your-frontend-domain.vercel.app
+COOKIE_DOMAIN=fintrack-my-wallet.vercel.app
+CORS_ORIGIN=https://fintrack-my-wallet.vercel.app
 RATE_LIMIT_WINDOW_MS=60000
 RATE_LIMIT_MAX=100
 BLOB_READ_WRITE_TOKEN=your-vercel-blob-token-here
