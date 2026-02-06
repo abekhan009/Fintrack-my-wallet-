@@ -19,7 +19,7 @@ export const getApiBaseUrl = () => {
   // Priority order:
   // 1. Environment variable (if explicitly set)
   // 2. Local development detection
-  // 3. Production backend
+  // 3. Production backend on Vercel
   
   if (import.meta.env.VITE_API_URL) {
     return import.meta.env.VITE_API_URL;
@@ -29,8 +29,8 @@ export const getApiBaseUrl = () => {
     return 'http://localhost:5000/api/v1';
   }
   
-  // Production backend on Render
-  return 'https://fintrack-backend-twti.onrender.com/api/v1';
+  // Production backend on Vercel
+  return 'https://fintrack-backend-rust.vercel.app/api/v1';
 };
 
 /**
